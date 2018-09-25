@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+// Created on: sept 20
+// Created by: ethan bellem
+// Created for: ICS3U
+// This program calculates price of pizza based on diameter 
+
+let RENT_PRICE : Float = 1.00
+let LABOUR_PRICE : Float = 0.75
+let MATERIAL_PRICE : Float = 0.50
+let TAX_PERCENTAGE : Float = 0.13
+
+show("enter the diameter for tour pizza.")
+
+let diameter = Float(askForNumber(" Diameter"))
+
+let cost = (diameter * MATERIAL_PRICE) + RENT_PRICE + LABOUR_PRICE
+let HST = cost * TAX_PERCENTAGE
+let totalCost = cost + HST as NSNumber
+
+let formatAsCurrency = NumberFormatter()
+formatAsCurrency.numberStyle = .currency 
+
+show("the price is: \(formatAsCurrency.string(from:totalCost)!)")
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 650}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 71}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
